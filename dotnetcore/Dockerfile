@@ -13,4 +13,5 @@ COPY bashrc /root/.bashrc
 
 COPY --from=base /root/vsdbg /usr/local/bin/vsdbg
 
+RUN apt-get update && apt-get install -y procps
 CMD ["bash"]
